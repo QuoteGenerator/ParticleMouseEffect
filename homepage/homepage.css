@@ -1,0 +1,71 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body, html{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.gallery{
+    position: absolute;
+    width: 1000px;
+    height: 800px;
+    background-color: lightblue;
+    border: 1px solid blue;
+    border-radius: 25px;
+    box-shadow: 0px 0px 50px darkblue;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+#testRoom1, #testRoom2, #testRoom3, #testRoom4, #testRoom5, #testRoom6{
+    width: 240px;
+    height: 200px;
+    border: 2px darkblue dashed;
+    margin: 40px;
+    padding: 0px;
+    cursor: pointer;
+}
+
+#testRoom1{
+    background-image: url(/images/testRoom1Thumbnail.png);
+    background-size: cover;
+}
+#testRoom2{
+    background-image: url("/images/smiley_Thumbnail.png");
+    background-size: cover;
+}
+#testRoom3{
+    background-color: black;
+    border: 2px white dashed;
+}
+#testRoom4{
+    background-color: rgb(255, 255, 255);
+}
+#testRoom5{
+    background-color: pink;
+}
+#testRoom6{
+    background-color: blueviolet;
+}
+
+#backgroundCanvas{
+    background-color: white;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+}
