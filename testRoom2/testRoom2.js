@@ -4,9 +4,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const blackOnWhiteButton = document.getElementById("blackOnWhiteButton");
-
-document.addEventListener("resize", (event) => {
+document.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 })
@@ -70,7 +68,7 @@ canvas.addEventListener("mouseup", () => {
 });
 
 async function loop(){
-        for(i=0; i < spawnRate; i++){
+        for(let i=0; i < spawnRate; i++){
             await new Promise(resolve => setTimeout(resolve, spawnSpeed));
             particles.push(new Particle(Math.random() * canvas.width, Math.random() * canvas.height));
         }

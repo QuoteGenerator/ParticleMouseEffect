@@ -19,9 +19,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const blackOnWhiteButton = document.getElementById("blackOnWhiteButton");
-
-document.addEventListener("resize", (event) => {
+document.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 })
@@ -85,7 +83,7 @@ function loop(){
    
     ctx.clearRect(0,0,canvas.width,canvas.height)
 
-    for(i=0; i < spawnRate; i++){
+    for(let i=0; i < spawnRate; i++){
         particles.push(new Particle(-100, -100));
     }
 

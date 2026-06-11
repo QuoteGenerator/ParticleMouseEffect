@@ -4,9 +4,7 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const blackOnWhiteButton = document.getElementById("blackOnWhiteButton");
-
-document.addEventListener("resize", (event) => {
+document.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 })
@@ -70,7 +68,7 @@ function loop(){
    
 
     if(mouse.isDown && mouse.mouseX !== undefined && mouse.mouseY !== undefined){
-        for(i=0; i < spawnRate; i++){
+        for(let i=0; i < spawnRate; i++){
             particles.push(new Particle(mouse.mouseX, mouse.mouseY));
         }
     }

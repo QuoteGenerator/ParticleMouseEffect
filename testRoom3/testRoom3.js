@@ -4,9 +4,8 @@ const ctx = canvas.getContext("2d");
 canvas.width = window.innerWidth;
 canvas.height = window.innerHeight;
 
-const blackOnWhiteButton = document.getElementById("blackOnWhiteButton");
 
-document.addEventListener("resize", (event) => {
+document.addEventListener("resize", () => {
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 })
@@ -15,7 +14,6 @@ document.addEventListener("resize", (event) => {
 ctx.fillStyle = "black";
 ctx.strokeStyle = "black";
 ctx.lineWidth = 5;
-const spawnRate = 1;
 
 const mouse = {
     mouseX : undefined,
